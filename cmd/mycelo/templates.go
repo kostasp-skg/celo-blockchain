@@ -164,7 +164,7 @@ func (e monorepoEnv) createEnv(workdir string) (*env.Environment, error) {
 		Accounts: env.AccountsConfig{
 			Mnemonic:             env.MustNewMnemonic(),
 			NumValidators:        3,
-			ValidatorsPerGroup:   1,
+			ValidatorsPerGroup:   1000, // monorepo uses a single validator group
 			NumDeveloperAccounts: 0,
 			UseValidatorAsAdmin:  true, // monorepo doesn't use the admin account type, uses first validator instead
 		},
